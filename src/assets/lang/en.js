@@ -35,7 +35,7 @@ module.exports = {
         team_mafee: "Senior Analyst of AKG Venture Trading Master Based on Harmonic Theory Senior traders in commodities and U.S. stock markets ",
         vision_one:"Anyone who has a smart mind but no experience in trading can turn himself into a professional financial trader with the right professional ethics, self-confidence and perseverance.",
         vision_two:"AKG's goal is to establish a relationship with our customers and help them build medium- and long-term personal goals and aspirations. Synchronize daily/weekly to monthly updates to encourage maximum personal development and maximize potential.",
-        weixin:'Official Customer Service in Wechat',
+        weixin:'Customer service WeChat',
         qq:'QQ group',
         ZH: 'CN',
         EN: 'EN'

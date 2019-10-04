@@ -23,8 +23,9 @@
     <div class="header">
       <swiper :options="swiperOption_banner">
         <swiper-slide class="" v-for="item in bannerList" :key="item.id">
-          <img :src="'http://www.akgvc.com:8082'+item.img" alt="">
+          <img :src="'http://www.akgvc.com:8082'+item.img" alt="" @click="jump(item.src)">
         </swiper-slide>
+        <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
 
@@ -64,8 +65,8 @@
 
 <!-- 我们的优势 -->
     <div class="bg_white text_center pad15">
-      <h3 class="font_15 server_top color_33">{{$t('youshi')}}</h3>
-      <p class="color_99 font_12 server_bot">OUR ADVANTAGES</p>
+      <h3 class="font_0 server_top color_33" :class="{'font_15 animated bounceInLeft' : scroll_youshi_animate}">{{$t('youshi')}}</h3>
+      <p class="color_99 font_0 server_bot" :class="{'font_12 animated bounceInLeft' : scroll_youshi_animate}">OUR ADVANTAGES</p>
       <ul class="youshi_ul font_reg">
         <li>
           <span class="icon_box" :class="{'shizi animated flipInY' : scroll_youshi_animate}"></span>
@@ -131,9 +132,9 @@
 
 <!-- 团队成员 -->
       <div id="two">
-        <div :class="{'animated pulse' : scroll_two_animate }">
-          <h3 class="font_15 server_top ">{{$t('nav_team')}}</h3>
-          <p class="color_99 font_12 server_bot">OUR TEAM</p>
+        <div >
+          <h3 class="font_0 server_top " :class="{'font_15 animated slideInLeft' : scroll_two_animate }">{{$t('nav_team')}}</h3>
+          <p class="color_99 font_0 server_bot" :class="{'font_12 animated slideInLeft' : scroll_two_animate }">OUR TEAM</p>
         </div>
         <swiper :options="swiperOption">
           <swiper-slide class="team_swiper_item">
@@ -193,7 +194,6 @@
 
         <ul class="text_center">
           <li class="xiaomishu">{{$t('weixin')}}</li>
-          <li class="qqun">{{$t('qq')}}</li>
         </ul>
       </div>
     </div>
@@ -232,6 +232,9 @@ export default {
           delay: 2500,
           disableOnInteraction: false
         },
+        pagination: {
+          el: '.swiper-pagination'
+        }
       },
       swiperOption: {
         loop: true,
@@ -269,6 +272,9 @@ export default {
     muen: function () {
       this.isActive = !this.isActive;
     },
+    jump (a) {
+      window.open(a);
+    },
     handleScroll: function () {
       this.isActive = false;
       let docTop = document.documentElement.scrollTop;
@@ -281,10 +287,10 @@ export default {
       if (docTop >= 4000 && docTop < 4200) {
         this.scroll_three_animate = true;
       } 
-      if (docTop >= 1800) {
+      if (docTop >= 1600) {
         this.scroll_youshi_animate = true;
       }
-      if (docTop >= 2400) {
+      if (docTop >= 2200) {
         this.scroll_case_animate = true;
       }
       if (docTop >= 2700) {
@@ -881,6 +887,29 @@ export default {
     height: 15px;
     z-index: 10;
     cursor: pointer;
+}
+.swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transition: opacity .3s;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 10;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+  }
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 2px;
+    display: inline-block;
+    border-radius: 4px;
+    background: rgba(255,255,255,.4);
+    margin-right: 3px;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #fff;
 }
 .dialog {
   width: 100%;
