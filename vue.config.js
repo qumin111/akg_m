@@ -77,51 +77,30 @@ module.exports = {
         })*/
     
     },
-    
-    // css相关配置
-    
+    lintOnSave: true,
+        // css相关配置
     css: {
-    
-    // 启用 CSS modules
-    
-    modules: false,
-    
-    // 是否使用css分离插件
-    
-    // extract: true,
-    
-    // 开启 CSS source maps?
-    
-    sourceMap: false,
-    
-    // css预设器配置项
-    
-    loaderOptions: {
-    
-        css: {},
-        
+        loaderOptions: {
             postcss: {
-            
                 plugins: [
-                
-                    //remUnit这个配置项的数值是多少呢？？？ 通常我们是根据设计图来定这个值，原因很简单，便于开发。
-                    
-                    //假如设计图给的宽度是750，我们通常就会把remUnit设置为75，这样我们写样式时，可以直接按照设计图标注的宽高来1:1还原开发。
-                    
-                    require('postcss-px2rem')({
-                    
-                        remUnit: 37.5,
-                        propList: ['*','!font*'], // !不匹配属性（这里是字体相关属性不转换）
-                
-                })
-                
+                    require('postcss-plugin-px2rem')({
+                        rootValue: 37.5, //换算基数， 默认100  ，这样的话把根标签的字体规定为1rem为50px,这样就可以从设计稿上量出多少个px直接在代码中写多上px了。
+                        // unitPrecision: 5, //允许REM单位增长到的十进制数字。
+                        //propWhiteList: [],  //默认值是一个空数组，这意味着禁用白名单并启用所有属性。
+                        // propBlackList: [], //黑名单
+                        // selectorBlackList: [], //要忽略并保留为px的选择器
+                        // ignoreIdentifier: false,  //（boolean/string）忽略单个属性的方法，启用ignoreidentifier后，replace将自动设置为true。
+                        // replace: true, // （布尔值）替换包含REM的规则，而不是添加回退。
+                        mediaQuery: false,  //（布尔值）允许在媒体查询中转换px。
+                        minPixelValue: 1 //设置要替换的最小像素值(3px会被转rem)。 默认 0
+                    }),
                 ]
-            
             }
-        
-        },
-    
+        }
     },
+    
+
+    
     
     // webpack-dev-server 相关配置
     

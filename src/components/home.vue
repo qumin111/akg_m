@@ -337,23 +337,53 @@ export default {
 .font_reg{
   font-family: 'PingFangSC-Regular'
 }
+[data-dpr="1"] .font_15 {
+    font-size: 15PX;
+}
+[data-dpr="1"] .font_14 {
+  font-size: 14PX; /*PX*/
+}
+[data-dpr="1"] .font_13 {
+  font-size: 13PX; /*PX*/
+}
+[data-dpr="1"] .font_12 {
+  font-size: 12PX; /*PX*/
+}
+[data-dpr="1"] .font_10 {
+  font-size: 10PX; /*px*/
+}
 .font_0{
   font-size: 0;
 }
 .font_15 {
-  font-size: 30px; /*px*/
+  font-size: 30PX; /*px*/
 }
 .font_14 {
-  font-size: 28px; /*px*/
+  font-size: 28PX; /*PX*/
 }
 .font_13 {
-  font-size: 26px; /*px*/
+  font-size: 26PX; /*PX*/
 }
 .font_12 {
-  font-size: 24px; /*px*/
+  font-size: 24PX; /*PX*/
 }
 .font_10 {
-  font-size: 20px; /*px*/
+  font-size: 20PX; /*px*/
+}
+[data-dpr="3"] .font_15 {
+    font-size: 45PX;
+}
+[data-dpr="3"] .font_14 {
+  font-size: 42PX; /*PX*/
+}
+[data-dpr="3"] .font_13 {
+  font-size: 39PX; /*PX*/
+}
+[data-dpr="3"] .font_12 {
+  font-size: 36PX; /*PX*/
+}
+[data-dpr="3"] .font_10 {
+  font-size: 30PX; /*px*/
 }
 
 .bg_white {
