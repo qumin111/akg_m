@@ -110,7 +110,8 @@ module.exports = {
                     
                     require('postcss-px2rem')({
                     
-                        remUnit: 37.5
+                        remUnit: 37.5,
+                        propList: ['*','!font*'], // !不匹配属性（这里是字体相关属性不转换）
                 
                 })
                 

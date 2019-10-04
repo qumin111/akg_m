@@ -37,7 +37,7 @@ module.exports = {
         vision_two:"AKG's goal is to establish a relationship with our customers and help them build medium- and long-term personal goals and aspirations. Synchronize daily/weekly to monthly updates to encourage maximum personal development and maximize potential.",
         weixin:'Official Customer Service in Wechat',
         qq:'QQ group',
-        ZH: 'zh',
-        EN: 'en'
+        ZH: 'CN',
+        EN: 'EN'
       }
 }

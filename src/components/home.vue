@@ -23,14 +23,14 @@
     <div class="header">
       <swiper :options="swiperOption_banner">
         <swiper-slide class="" v-for="item in bannerList" :key="item.id">
-          <img :src="'http://www.akgvc.com/'+item.img" :alt="item">
+          <img :src="'http://www.akgvc.com:8082'+item.img" alt="">
         </swiper-slide>
       </swiper>
     </div>
 
 <!-- 我们的服务 -->
     <div class="bg_white text_center pad15" id="one">
-      <div class="animated pulse">
+      <div class="animated slideInLeft">
         <h3 class="font_15 server_top color_33">{{$t('nav_server')}}</h3>
         <p class="color_99 font_12 server_bot">OUR SERVICES</p>
       </div>
@@ -186,9 +186,9 @@
       <p class="font_15 ">{{$t('nav_contact')}}</p>
       <div class="contact_flex">
         <ul>
-          <li class="contact_phone">400-0000-0</li>
-          <li class="contact_email">eixndkgjlskj@163.com</li>
-          <li class="contact_feiji">4567890</li>
+          <li class="contact_phone">718042970</li>
+          <li class="contact_email">official@akgvc.com</li>
+          <li class="contact_feiji">yunyingheima</li>
         </ul>
 
         <ul class="text_center">
@@ -198,7 +198,7 @@
       </div>
     </div>
 
-    <div class="footer text_center font_12">京ICP备案14246-46号</div>
+    <!-- <div class="footer text_center font_12">京ICP备案14246-46号</div> -->
     <transition name="slide-fade">
       <div class="dialog" v-if="isShow">
         <div>
@@ -250,8 +250,7 @@ export default {
     
   },
   created() {
-    this.$http.get('http://www.decostudio.cn:8081/port/Slide/getSlideList').then((res) => {
-        console.log(res);
+    this.$http.get('http://www.akgvc.com:8082/port/Slide/getSlideList').then((res) => {
         this.bannerList = res.data.data;
     }).catch((err) => {
         console.log(err);
@@ -269,14 +268,6 @@ export default {
     },
     muen: function () {
       this.isActive = !this.isActive;
-    },
-    handleScroll: function () {
-      this.isActive = false;
-      if (document.documentElement.scrollTop > 50) {
-        this.nav_black = true;
-      } else {
-         this.nav_black = false;
-      }
     },
     handleScroll: function () {
       this.isActive = false;
@@ -350,19 +341,19 @@ export default {
   font-size: 0;
 }
 .font_15 {
-  font-size: 30px; /*no*/
+  font-size: 30px; /*px*/
 }
 .font_14 {
-  font-size: 28px; /*no*/
+  font-size: 28px; /*px*/
 }
 .font_13 {
-  font-size: 26px; /*no*/
+  font-size: 26px; /*px*/
 }
 .font_12 {
-  font-size: 24px; /*no*/
+  font-size: 24px; /*px*/
 }
 .font_10 {
-  font-size: 20px; /*no*/
+  font-size: 20px; /*px*/
 }
 
 .bg_white {
@@ -392,7 +383,7 @@ export default {
 .nav_logo {
   width: 48px;
   height: 16px;
-  background: url("../assets/logo_w.jpg") no-repeat center;
+  background: url("../assets/logo_w.png") no-repeat center;
   background-size: cover;
 }
 .nav_icon {
@@ -466,7 +457,7 @@ export default {
   background-color: rgba(255,255,255,0.15);
   border-radius: 3px;
   h1{
-    font-size: 22px; /*no*/
+    font-size: 22px; /*px*/
     line-height: 16.93px;
   }
 }
@@ -611,7 +602,7 @@ export default {
 .case_cont {
   width: 100%;
   height: 128px;
-  background: url("../assets/case_one.png") no-repeat center;
+  background: url("../assets/case_big.png") no-repeat center;
   background-size: cover;
 }
 .case_jiben {
@@ -755,7 +746,7 @@ export default {
 .xiaomishu {
   display: inline-block;
   padding-top: 46px;
-  background:  url("../assets/xiaohongshu.png") no-repeat top center;
+  background:  url("../assets/zixuncode.jpg") no-repeat top center;
   background-size: 33px;
   line-height: 16px;
   color: #ffffffba;
@@ -765,7 +756,7 @@ export default {
   width: 40px;
   display: inline-block;
   padding-top: 46px;
-  background:  url("../assets/qqaun.png") no-repeat top center;
+  background:  url("../assets/zixuncode.jpg") no-repeat top center;
   background-size: 33px;
   line-height: 16px;
   color: #ffffffba;
