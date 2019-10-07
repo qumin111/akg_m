@@ -290,16 +290,16 @@ export default {
       if (docTop >= 1600) {
         this.scroll_youshi_animate = true;
       }
-      if (docTop >= 2200) {
+      if (docTop >= 2000) {
         this.scroll_case_animate = true;
       }
-      if (docTop >= 2700) {
+      if (docTop >= 2500) {
         this.scroll_case2_animate = true;
       }
-      if (docTop >= 3000) {
+      if (docTop >= 2800) {
         this.scroll_two_animate = true;
       } 
-      if (docTop >= 3700) {
+      if (docTop >= 3400) {
         this.scroll_vision_animate = true;
       }
     },
