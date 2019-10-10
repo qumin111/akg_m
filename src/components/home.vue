@@ -116,7 +116,7 @@
             <p class="color_99 font_0 k_xian_back" :class="{'font_12 animated bounceInLeft' : scroll_case2_animate}">{{$t('case_huibao')}}</p>
           </div>
         </div>
-        <p class="font_10 yellow_btn">{{$t('tougu_server')}}</p>
+        <p class="font_10 yellow_btn">{{$t('zixun_server')}}</p>
       </div>
 
       <!-- <div class="box_shadow text_center k_xian">
@@ -140,31 +140,67 @@
           <swiper-slide class="team_swiper_item">
             <div class="box_shadow text_center">
               <span class="icon_box team_icon_box rumyu"></span>
-              <p class="font_15 color_33 name">Rum YU</p>
+              <p class="font_15 color_33 name">Rum</p>
               <p class="color_99 font_12 team_des">{{$t('team_yu')}}</p>
             </div>
           </swiper-slide>
-          <swiper-slide class="team_swiper_item">
-            <div class="box_shadow text_center">
-              <span class="icon_box team_icon_box canggongzi"></span>
-              <p class="font_15 color_33 name">{{$t('mr_cang')}}</p>
-              <p class="color_99 font_12 team_des">{{$t('team_canggongzi')}}</p>
-            </div>
-          </swiper-slide>
-          <swiper-slide class="team_swiper_item">
-            <div class="box_shadow text_center">
-              <span class="icon_box team_icon_box tinzhang"></span>
-              <p class="font_15 color_33 name">Tin.Zhang</p>
-              <p class="color_99 font_12 team_des">{{$t('team_tin')}}</p>
-            </div>
-          </swiper-slide>
-          <swiper-slide class="team_swiper_item">
-            <div class="box_shadow text_center">
-              <span class="icon_box team_icon_box mafee"></span>
-              <p class="font_15 color_33 name">Mafee</p>
-              <p class="color_99 font_12 team_des">{{$t('team_mafee')}}</p>
-            </div>
-          </swiper-slide>
+            <swiper-slide class="team_swiper_item">
+              <div class="box_shadow text_center ">
+                <span class="icon_box team_icon_box Arkin"></span>
+                <p class="font_15 color_33 name">Arkin</p>
+                <p class="color_99 font_16 team_des">{{$t('team_Arkin')}}</p>
+              </div>
+            </swiper-slide>
+            <swiper-slide class="team_swiper_item">
+              <div class="box_shadow text_center">
+                <span class="icon_box team_icon_box Mr_cang"></span>
+                <p class="font_15 color_33 name">{{$t('Mr_cang')}}</p>
+                <p class="color_99 font_16 team_des">{{$t('team_cang')}}</p>
+              </div>
+            </swiper-slide>
+            <swiper-slide class="team_swiper_item">
+              <div class="box_shadow text_center">
+                <span class="icon_box team_icon_box Chuck"></span>
+                <p class="font_15 color_33 name">Chuck</p>
+                <p class="color_99 font_16 team_des">{{$t('team_Chuck')}}</p>
+              </div>
+            </swiper-slide>
+            <swiper-slide class="team_swiper_item">
+              <div class="box_shadow text_center">
+                <span class="icon_box team_icon_box Wendy"></span>
+                <p class="font_15 color_33 name">Wendy</p>
+                <p class="color_99 font_16 team_des">{{$t('team_Wendy')}}</p>
+              </div>
+            </swiper-slide>
+            <swiper-slide class="team_swiper_item">
+              <div class="box_shadow text_center">
+                <span class="icon_box team_icon_box Wag"></span>
+                <p class="font_15 color_33 name">Wag</p>
+                <p class="color_99 font_16 team_des">{{$t('team_Wag')}}</p>
+              </div>
+            </swiper-slide>
+            <swiper-slide class="team_swiper_item">
+              <div class="box_shadow text_center">
+                <span class="icon_box team_icon_box Bill"></span>
+                <p class="font_15 color_33 name">Bill</p>
+                <p class="color_99 font_16 team_des">{{$t('team_Bill')}}</p>
+              </div>
+            </swiper-slide>
+            <swiper-slide class="team_swiper_item">
+              <div class="box_shadow text_center">
+                <span class="icon_box team_icon_box Taylor"></span>
+                <p class="font_15 color_33 name">Taylor</p>
+                <p class="color_99 font_16 team_des">{{$t('team_Taylor')}}</p>
+              </div>
+            </swiper-slide>
+            <swiper-slide class="team_swiper_item">
+              <div class="box_shadow text_center">
+                <span class="icon_box team_icon_box Mafee"></span>
+                <p class="font_15 color_33 name">Mafee</p>
+                <p class="color_99 font_16 team_des">{{$t('team_Mafee')}}</p>
+              </div>
+            </swiper-slide>
+
           <div class="swiper-button-prev" slot="button-prev"></div>
           <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
@@ -177,9 +213,10 @@
         <p class="color_99 font_12 server_bot">Vision</p>
         <p class="color_99 font_12 about_des">{{$t('vision_one')}}<br>{{$t('vision_two')}}</p>
         <ul class="about_ul">
-          <li class="" :class="{'about_one animated flipInX' : scroll_vision_animate}"></li>
-          <li class="" :class="{'about_two animated flipInX' : scroll_vision_animate}"></li>
+          <li class="" :class="{'about_one animated flipInX' : scroll_vision_animate}" @click="jump('https://ftx.com/')"></li>
+          <li class="" :class="{'about_two animated flipInX' : scroll_vision_animate}" @click="jump('http://ufex.com/')"></li>
           <li class="" :class="{'about_three animated flipInX' : scroll_vision_animate}"></li>
+          <li class="" :class="{'about_four animated flipInX' : scroll_vision_animate}" @click="jump('https://www.ccfox.com/')"></li>
         </ul>
     </div>
 <!-- 联系我们 -->
@@ -188,8 +225,8 @@
       <div class="contact_flex">
         <ul>
           <li class="contact_phone">718042970</li>
-          <li class="contact_email">official@akgvc.com</li>
-          <li class="contact_feiji">yunyingheima</li>
+          <li class="contact_email">info@akgvc.com</li>
+          <li class="contact_feiji">AKGVenture</li>
         </ul>
 
         <ul class="text_center">
@@ -215,6 +252,7 @@ export default {
   name: 'home',
   data () {
     return {
+      docTop:0,
       isShow: false,
       isActive: false,
       nav_black: false,
@@ -278,28 +316,29 @@ export default {
     handleScroll: function () {
       this.isActive = false;
       let docTop = document.documentElement.scrollTop;
+      this.docTop = docTop;
       // console.log(docTop);
       if (docTop > 50) {
         this.nav_black = true;
       } else {
          this.nav_black = false;
       }
-      if (docTop >= 4000 && docTop < 4200) {
+      if (docTop >= 3300) {
         this.scroll_three_animate = true;
       } 
-      if (docTop >= 1600) {
+      if (docTop >= 1700) {
         this.scroll_youshi_animate = true;
       }
-      if (docTop >= 2000) {
+      if (docTop >= 2400) {
         this.scroll_case_animate = true;
       }
       if (docTop >= 2500) {
         this.scroll_case2_animate = true;
       }
-      if (docTop >= 2800) {
+      if (docTop >= 3600) {
         this.scroll_two_animate = true;
       } 
-      if (docTop >= 3400) {
+      if (docTop >= 4200) {
         this.scroll_vision_animate = true;
       }
     },
@@ -615,24 +654,26 @@ export default {
 .shizi {
   background:  url("../assets/shizi.png") no-repeat center;
   background-size: 20px;
+  -webkit-animation-delay: 0.3s;//延迟
+  animation-delay: 0.3s;
 }
 .kecheng_icon {
   background:  url("../assets/kecheng.png") no-repeat center;
   background-size: 20px;
-  -webkit-animation-delay: 0.3s;//延迟
-  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.6s;//延迟
+  animation-delay: 0.6s;
 }
 .shequn {
   background:  url("../assets/shequn.png") no-repeat center;
   background-size: 20px;
-  -webkit-animation-delay: .6s;//延迟
-  animation-delay: .6s;
+  -webkit-animation-delay: .9s;//延迟
+  animation-delay: .9s;
 }
 .anli {
   background:  url("../assets/anli.png") no-repeat center;
   background-size: 20px;
-  -webkit-animation-delay: 1s;//延迟
-  animation-delay: 1s;
+  -webkit-animation-delay: 1.2s;//延迟
+  animation-delay: 1.2s;
 }
 
 .case_cont {
@@ -640,10 +681,14 @@ export default {
   height: 128px;
   background: url("../assets/case_big.png") no-repeat center;
   background-size: cover;
+  -webkit-animation-delay: 0.2s;//延迟
+  animation-delay: 0.2s;
 }
 .case_jiben {
   margin-bottom: 22px;
   margin-top: 16.5px;
+    -webkit-animation-delay: 0.3s;//延迟
+  animation-delay: 0.3s;
 }
 .case_shadow{
   box-shadow: 0 4px 5px 0px #e8e8e885; 
@@ -664,13 +709,19 @@ export default {
   display: inline-block;
   background: url("../assets/case_two.png") no-repeat center;
   background-size: cover;
+  -webkit-animation-delay: 0.8s;//延迟
+  animation-delay: 0.8s;
 }
 .k_xian_fenxi {
   margin-top: 16px;
   margin-bottom: 10px;
+  -webkit-animation-delay: 0.9s;//延迟
+  animation-delay: 0.9;
 }
 .k_xian_back {
   margin-bottom: 22px;
+  -webkit-animation-delay: 0.9s;//延迟
+  animation-delay: 0.9s;
 }
 .ftx {
   display: inline-block;
@@ -692,15 +743,35 @@ export default {
   background:  url("../assets/rumyu.jpeg") no-repeat center;
   background-size: cover; 
 }
-.canggongzi {
-  background:  url("../assets/canggongzi.jpeg") no-repeat center;
+.Arkin {
+  background:  url("../assets/Arkin.jpg") no-repeat center;
   background-size: cover; 
 }
-.tinzhang {
-  background:  url("../assets/tinzhang.jpeg") no-repeat center;
+.Chuck {
+  background:  url("../assets/Chuck.jpeg") no-repeat center;
   background-size: cover; 
 }
-.mafee {
+.Mr_cang {
+  background:  url("../assets/Mr_cang.jpeg") no-repeat center;
+  background-size: cover; 
+}
+.Wendy {
+  background:  url("../assets/Wendy.jpeg") no-repeat center;
+  background-size: cover; 
+}
+.Wag {
+  background:  url("../assets/Wag.jpeg") no-repeat center;
+  background-size: cover; 
+}
+.Bill {
+  background:  url("../assets/Bill.jpeg") no-repeat center;
+  background-size: cover; 
+}
+.Taylor {
+  background:  url("../assets/Taylor.jpeg") no-repeat center;
+  background-size: cover; 
+}
+.Mafee {
   background:  url("../assets/mafee.jpeg") no-repeat center;
   background-size: cover; 
 }
@@ -729,22 +800,27 @@ export default {
     }
 }
 .about_one {
-  width: 108px;
+  width: 80px;
   height: 40px;
   background:  url("../assets/about_one.png") no-repeat center;
-  background-size: 70px; 
+  background-size: 50px; 
 }
 .about_two {
-  width: 108px;
+  width: 80px;
   background:  url("../assets/about_two.png") no-repeat center;
-  background-size: 70px; 
+  background-size: 50px; 
 }
 .about_three {
-  width: 108px;
+  width: 80px;
   background:  url("../assets/about_three.png") no-repeat center;
-  background-size: 90px; 
+  background-size: 60px; 
 }
-
+.about_four {
+  width: 80px;
+  background:  url("../assets/ccfox.jpeg") no-repeat center;
+  background-size: 60px; 
+  cursor: pointer;
+}
 .contact {
   width: 100%;
   background-color: #2E344C ;
