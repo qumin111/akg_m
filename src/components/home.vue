@@ -53,7 +53,8 @@
     <div class="text_center pad15">
       <h3 class="font_15 server_top color_33">{{$t('kecheng')}}</h3>
       <p class="font_10 yellow_btn kecheng_yellow_dis">{{$t('tougu_server')}}</p>
-      <iframe src="http://h5school.haoxuezhang.cn/index.php?from=timeline&isappinstalled=0" class="kecheng_video"></iframe>
+      <!-- <iframe src="http://h5school.haoxuezhang.cn/index.php?from=timeline&isappinstalled=0" class="kecheng_video"></iframe> -->
+      <div class="kecheng_video"><img src="../assets/case_big.png" alt=""></div>
       <ul class="kecheng_ul">
         <li><span class="dot"></span><span class="font_12 color_66">{{$t('kecheng_one')}}</span></li>
         <li><span class="dot"></span><span class="font_12 color_66">{{$t('kecheng_two')}}</span></li>
@@ -592,7 +593,7 @@ export default {
 }
 .kecheng_video {
   width: 100%;
-  height: 190px;
+  height: 148px;
   margin-bottom: 15.8px;
 }
 .kecheng_ul {
