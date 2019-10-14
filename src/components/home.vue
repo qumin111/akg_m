@@ -216,7 +216,7 @@
         <ul class="about_ul">
           <li class="" :class="{'about_one animated flipInX' : scroll_vision_animate}" @click="jump('https://ftx.com/')"></li>
           <li class="" :class="{'about_two animated flipInX' : scroll_vision_animate}" @click="jump('http://ufex.com/')"></li>
-          <li class="" :class="{'about_three animated flipInX' : scroll_vision_animate}"></li>
+          <li class="" :class="{'about_three animated flipInX' : scroll_vision_animate}" @click="jump(' http://www.lehmanbush.com/')"></li>
           <li class="" :class="{'about_four animated flipInX' : scroll_vision_animate}" @click="jump('https://www.ccfox.com/')"></li>
         </ul>
     </div>
