@@ -218,6 +218,7 @@
           <li class="" :class="{'about_two animated flipInX' : scroll_vision_animate}" @click="jump('http://ufex.com/')"></li>
           <li class="" :class="{'about_three animated flipInX' : scroll_vision_animate}" @click="jump(' http://www.lehmanbush.com/')"></li>
           <li class="" :class="{'about_four animated flipInX' : scroll_vision_animate}" @click="jump('https://www.ccfox.com/')"></li>
+          <li class="" :class="{'about_five animated flipInX' : scroll_vision_animate}" @click="jump('https://www.ivorybaycapital.com/')"></li>
         </ul>
     </div>
 <!-- 联系我们 -->
@@ -798,29 +799,35 @@ export default {
       flex-shrink:0;
       box-shadow: 0 0 5px 0px #e8e8e885; 
       height: 35px;
+      cursor: pointer;
     }
 }
 .about_one {
-  width: 80px;
+  width: 60px;
   height: 40px;
   background:  url("../assets/about_one.png") no-repeat center;
   background-size: 50px; 
 }
 .about_two {
-  width: 80px;
+  width: 60px;
   background:  url("../assets/about_two.png") no-repeat center;
   background-size: 50px; 
 }
 .about_three {
-  width: 80px;
+  width: 60px;
   background:  url("../assets/about_three.png") no-repeat center;
   background-size: 60px; 
+  
 }
 .about_four {
-  width: 80px;
+  width: 60px;
   background:  url("../assets/ccfox.jpeg") no-repeat center;
   background-size: 60px; 
-  cursor: pointer;
+}
+.about_five {
+  width: 60px;
+  background:  url("../assets/about_five.jpg") no-repeat center;
+  background-size: 60px; 
 }
 .contact {
   width: 100%;
